@@ -1,0 +1,22 @@
+<div class="col s3" >
+    <div class="card">
+      <div class="card-image">
+        <img src="{{user.picture.large}}">
+        <span 
+            class="card-title"
+            [ngClass]="{'marked': isMarked}"
+        >
+            {{user.name.first | uppercase}} {{user.name.last | uppercase}}
+        </span>
+      </div>
+      <div class="card-content">
+        <p>{{user.location.city}} {{user.location.state}}</p>
+      </div>
+      <div class="card-action">
+        <a 
+        (click)="onClick()"
+        class="waves-effect waves-light btn"
+        >Отметить</a>
+      </div>
+    </div>
+</div>
